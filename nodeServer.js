@@ -10,7 +10,7 @@ const port = 3000;
 
 // Enable CORS for all routes, allowing only specific origin (your frontend)
 app.use(cors({
-  origin: 'http://127.0.0.1:5500',  // Replace with the URL of your frontend (if needed)
+  origin: 'https://my-cv-website-ten.vercel.app/',  // Replace with the URL of your frontend (if needed)
 }));
 
 // Middleware to parse incoming JSON data
@@ -50,5 +50,5 @@ app.post('/submit-feedback', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at https://my-cv-website-ten.vercel.app/${port}`);
 });
