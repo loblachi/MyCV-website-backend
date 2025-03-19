@@ -9,7 +9,6 @@ const app = express();
 const port = 3000;
 
 // Enable CORS for all routes, allowing only specific origin (your frontend)
-const cors = require('cors');
 
 const corsOptions = {
   origin: 'https://my-cv-website-ten.vercel.app', // allow this specific origin
