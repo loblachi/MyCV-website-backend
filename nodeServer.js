@@ -9,9 +9,15 @@ const app = express();
 const port = 3000;
 
 // Enable CORS for all routes, allowing only specific origin (your frontend)
-app.use(cors({
-  origin: 'https://my-cv-website-ten.vercel.app/',  // Replace with the URL of your frontend (if needed)
-}));
+const cors = require('cors');
+
+const corsOptions = {
+  origin: 'https://my-cv-website-ten.vercel.app', // allow this specific origin
+  methods: 'POST',
+  allowedHeaders: 'Content-Type, Authorization'
+};
+
+app.use(cors(corsOptions));
 
 // Middleware to parse incoming JSON data
 app.use(bodyParser.json());
